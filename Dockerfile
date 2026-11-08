@@ -1,11 +1,6 @@
-FROM python:3.11-slim-buster
+FROM python:3.11-slim
 
 WORKDIR /app
-
-# Install system dependencies if required (e.g. for building packages)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
 
 # Copy dependency definition first for caching layers
 COPY requirements.txt .
@@ -21,4 +16,3 @@ EXPOSE 5000
 
 # Run the Flask app
 CMD ["python", "app.py"]
-
