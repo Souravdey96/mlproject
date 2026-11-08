@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.gitignore
+catboost_info/
+logs/
+artifacts/*.csv
+notebook/
+mlproject.egg-info/
+
